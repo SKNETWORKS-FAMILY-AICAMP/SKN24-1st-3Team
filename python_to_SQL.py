@@ -1,0 +1,120 @@
+import pandas as pd
+import pymysql
+
+#1. 원본 데이터
+raw_data = [
+    ['2025', '87,135', '50,122', '34,515', '71,284', '16,277', '22,387', '12,485', '6,718', '166,319', '20,398', '25,862', '28,961', '22,764', '33,094', '29,951', '52,778', '47,302', '728,352'],
+    ['2024', '74,116', '38,277', '28,868', '48,498', '13,051', '18,961', '9,951', '5,234', '124,529', '16,955', '20,054', '22,609', '18,717', '25,329', '22,134', '37,441', '39,059', '563,783'],
+    ['2023', '64,369', '29,569', '24,479', '35,275', '10,682', '15,735', '8,196', '4,379', '92,771', '14,560', '15,393', '17,954', '14,581', '19,450', '16,805', '29,267', '30,568', '444,033'],
+    ['2022', '53,612', '19,593', '20,210', '23,974', '8,025', '13,044', '6,301', '3,044', '66,606', '11,842', '12,316', '13,234', '9,901', '12,770', '12,555', '19,278', '25,736', '332,041'],
+    ['2021', '37,617', '11,163', '13,942', '11,829', '4,961', '7,204', '4,727', '1,874', '34,642', '7,550', '6,778', '8,194', '5,888', '7,565', '7,779', '11,146', '21,325', '204,184'],
+    ['2020', '17,463', '4,628', '9,014', '4,581', '3,041', '3,591', '3,552', '897', '16,116', '3,540', '3,160', '4,513', '2,586', '3,756', '4,246', '5,023', '12,338', '102,045'],
+    ['2019', '9,796', '3,076', '8,467', '2,169', '2,329', '2,349', '2,421', '665', '9,131', '2,031', '2,052', '2,558', '1,401', '2,234', '2,930', '3,107', '11,064', '67,780'],
+    ['2018', '4,745', '1,010', '4,393', '790', '1,084', '1,019', '909', '218', '3,876', '892', '812', '721', '616', '981', '1,018', '1,387', '8,088', '32,559'],
+    ['2017', '1,191', '401', '568', '233', '197', '104', '184', '24', '729', '170', '100', '167', '139', '384', '258', '446', '3,255', '8,550'],
+    ['2016', '785', '172', '119', '94', '105', '19', '30', '8', '236', '76', '21', '68', '18', '221', '102', '303', '2,567', '4,944'],
+    ['2015', '694', '142', '36', '77', '97', '13', '26', '7', '171', '61', '16', '62', '16', '188', '85', '299', '1,605', '3,595'],
+    ['2014', '378', '67', '10', '49', '63', '10', '11', '2', '96', '32', '4', '44', '4', '78', '52', '188', '433', '1,521'],
+    ['2013', '134', '9', '3', '13', '2', '7', '8', '2', '40', '10', '1', '27', '0', '15', '17', '82', '131', '501'],
+    ['2012', '48', '7', '2', '10', '1', '2', '7', '0', '32', '7', '0', '3', '0', '10', '10', '51', '42', '232'],
+    ['2011', '41', '4', '2', '7', '0', '2', '7', '0', '23', '5', '0', '1', '0', '7', '8', '51', '40', '198'],
+    ['2010', '5', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '5']
+]
+
+#2. 컬럼명
+columns = [
+    "year",
+    "seoul", "busan", "daegu", "incheon", "gwangju", "daejeon", "ulsan", "sejong",
+    "gyeonggi", "gangwon", "chungbuk", "chungnam", "jeonbuk", "jeonnam",
+    "gyeongbuk", "gyeongnam", "jeju",
+    "total"
+]
+
+#3. Dataframe 생성 + 전처리 (콤마 제거, 정수 변환)
+df = pd.DataFrame(raw_data, columns=columns)
+
+df["year"] = df["year"].astype(int)
+
+num_cols = df.columns.drop("year")
+df[num_cols] = (
+    df[num_cols]
+    .replace(",", "", regex=True)    #'87,135' -> '87135'
+    .astype(int)                     #문자열 -> int
+)
+
+print(df.head())
+print(df.dtypes)
+
+#4. MySQL 접속 정보 (본인 환경으로 수정)
+db_config = {
+    "host": "127.0.0.1",
+    "port": 3306,
+    "user": "ohgiraffers",
+    "password": "ohgiraffers",
+    "database": "evdb",
+    "charset": "utf8mb4",
+    "autocommit": False,
+}
+
+table_name = "ev_yearly_registration"
+
+#5. MySQL 적재 (테이블 생성 + UPSERT)
+create_table_sql = f"""
+CREATE TABLE IF NOT EXISTS {table_name} (
+    year INT NOT NULL,
+    seoul INT NOT NULL,
+    busan INT NOT NULL,
+    daegu INT NOT NULL,
+    incheon INT NOT NULL,
+    gwangju INT NOT NULL,
+    daejeon INT NOT NULL,
+    ulsan INT NOT NULL,
+    sejong INT NOT NULL,
+    gyeonggi INT NOT NULL,
+    gangwon INT NOT NULL,
+    chungbuk INT NOT NULL,
+    chungnam INT NOT NULL,
+    jeonbuk INT NOT NULL,
+    jeonnam INT NOT NULL,
+    gyeongbuk INT NOT NULL,
+    gyeongnam INT NOT NULL,
+    jeju INT NOT NULL,
+    total INT NOT NULL,
+    PRIMARY KEY (year)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+"""
+
+# INSERT + 중복 year면 UPDATE
+col_sql = ", ".join(columns)
+placeholders = ", ".join(["%s"] * len(columns))
+update_assignments = ", ".join([f"{c}=VALUES({c})" for c in columns if c != "year"])
+
+insert_sql = f"""
+INSERT INTO {table_name} ({col_sql})
+VALUES ({placeholders})
+ON DUPLICATE KEY UPDATE {update_assignments};
+"""
+
+def main():
+    conn = pymysql.connect(**db_config)
+    try:
+        with conn.cursor() as cur:
+            # 테이블 생성
+            cur.execute(create_table_sql)
+
+            # DataFrame -> list[tuple] 변환 후 일괄 적재
+            data_to_insert = [tuple(row) for row in df.to_numpy()]
+            cur.executemany(insert_sql, data_to_insert)
+
+        conn.commit()
+        print(f"OK: {len(df)} rows upserted into evdb.{table_name}")
+
+    except Exception as e:
+        conn.rollback()
+        print("ERROR:", e)
+        raise
+    finally:
+        conn.close()
+
+if __name__ == "__main__":
+    main()
