@@ -4,15 +4,15 @@
 
 >팀명: 다함께 전기차⚡
 
->팀원: GitHub
+>팀원:
 
-|| 이름   | 업무            | GitHub |       세부사항     |
-|:-----:|:---------------:|:------:| :---------------:|:----------:|
-|<img src="https://icons.veryicon.com/png/o/internet--web/digital-monster/tokomon.png" alt=tokomon\ width="64px" height="64px">| 나혜린 | DB              | [nature0022](https://github.com/hyerinna.hn) | Insert/select API, 크롤링, ERD 설계, DB 구축, Streamlit  |
-|<img src="https://icons.veryicon.com/png/o/internet--web/digital-monster/plotmon.png" alt=agumon\ width="64px" height="64px">| 박영훈 | Frontend        | [silentkit12](https://github.com/Yhpark0208) | 크롤링, ERD 설계, Streamlit, 차트 시각화, 리드미 작성
-|<img src="https://icons.veryicon.com/png/o/internet--web/digital-monster/tentomon.png" alt=tentomon\ width="64px" height="64px">| 이동민 | Backend         | [Wjaehyun](https://github.com/Wjaehyun) | 크롤링, ERD 설계, Streamlit, 차트 시각화, FAQ
-|<img src="https://icons.veryicon.com/png/o/internet--web/digital-monster/punimon.png" alt=agumon\ width="64px" height="64px">| 전윤우 | Data processing | [hyebinhy](https://github.com/hyebinhy) |  크롤링, ERD 설계, Streamlit, 차트 시각화, 리드미 작성  |
-|<img src="https://icons.veryicon.com/png/o/internet--web/digital-monster/yukimibotamon.png" alt=yukimibotamon\ width="64px" height="64px">| 진세형 | Web Crawling    | [duck213](https://github.com/duck213) |  Insert/select API, 크롤링, ERD 설계, DB 구축, Streamlit  |
+|   이름   | GitHub            | 업무 |
+|:--------:|:-----------------:| :---:|
+| 나혜린 | [nngpfls](https://github.com/nngpfls) | Insert/select API, 크롤링, ERD 설계, DB 구축, Streamlit  |
+| 박영훈 | [aprkaos56](https://github.com/aprkaos56) | 크롤링, ERD 설계, Streamlit, 차트 시각화, 리드미 작성
+| 이동민 | [수정필요](https://github.com/수정필요) | 크롤링, ERD 설계, Streamlit, 차트 시각화, FAQ
+| 전윤우 | [Yunu-Jeon](https://github.com/Yunu-Jeon) |  크롤링, ERD 설계, Streamlit, 차트 시각화, 리드미 작성  |
+| 진세형 | [gugu-eightyone](https://github.com/gugu-eightyone) |  Insert/select API, 크롤링, ERD 설계, DB 구축, Streamlit  |
 
 ---
 2. 프로젝트 개요
