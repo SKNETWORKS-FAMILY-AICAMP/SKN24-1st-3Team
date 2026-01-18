@@ -45,6 +45,8 @@ __다함께 전기차⚡__
 ---
 
 ## 4. WBS
+<img width="1710" height="372" alt="image" src="https://github.com/user-attachments/assets/c61e2ecb-1352-4ec2-8849-384b1a05b431" />
+
 ## 5. 요구사항 명세서
 ## 6. ERD
 <img width="1024" height="482" alt="image" src="https://github.com/user-attachments/assets/350799af-7f24-4057-a918-8e0e06690964" />
