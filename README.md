@@ -67,7 +67,9 @@
 <img width="1024" height="482" alt="image" src="https://github.com/user-attachments/assets/350799af-7f24-4057-a918-8e0e06690964" />
 
 ## 7. 수행 결과 (시연 페이지)
+<img width="1895" height="797" alt="image" src="https://github.com/user-attachments/assets/5ce34fac-3ca6-4bca-8b36-56004dacaf23" />
 https://github.com/user-attachments/assets/cd9a6cad-db88-4d3f-a11c-0601f25d0601
+https://github.com/user-attachments/assets/edfdba03-40bc-4326-8cc7-6e3cd708ddaf
 
 ### 7-1. 현재 구현
 - Streamlit을 통하여 사용자는 연도와 시/도를 기준으로 전기차 등록대수 및 전기차 등록 증가 추이를 조회할 수 있다.
@@ -92,5 +94,6 @@ https://github.com/user-attachments/assets/cd9a6cad-db88-4d3f-a11c-0601f25d0601
 - 이동민:
 - 전윤우:
 - 진세형:
+
 
 
