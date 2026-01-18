@@ -39,8 +39,6 @@
 | 협업 툴       | ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white)                                                   |
 | 데이터 수집       | ![Selenium](https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white)                                                  |
 
----
-
 ## 4. WBS
 <img width="1710" height="372" alt="image" src="https://github.com/user-attachments/assets/c61e2ecb-1352-4ec2-8849-384b1a05b431" />
 
