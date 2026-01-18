@@ -1,11 +1,10 @@
 # SKN24-1st-3Team
 
 ## 1. 팀 소개
+## 1-1.팀명
+__다함께 전기차⚡__
 
->팀명: 다함께 전기차⚡
-
->팀원:
-
+## 1-2. 팀원
 |   이름   | GitHub            | 업무 |
 |:--------:|:-----------------:| :---:|
 | 나혜린 | [nngpfls](https://github.com/nngpfls) | Insert/select API, 크롤링, ERD 설계, DB 구축, Streamlit  |
