@@ -1,9 +1,20 @@
-# ⚡ SKN24-1st-3Team : NeedH2
-SK네트웍스 Family AI 캠프 24기 1차 프로젝트
+# SKN24-1st-3Team
+---
+## 1. 팀 소개
 
-1. 팀 소개
-다함께 전기차
+>팀명: 다함께 전기차⚡
 
+>팀원: GitHub
+
+|| 이름   | 업무            | GitHub |       세부사항     |
+|:-----:|:---------------:|:------:| :---------------:|:----------:|
+|<img src="https://icons.veryicon.com/png/o/internet--web/digital-monster/tokomon.png" alt=tokomon\ width="64px" height="64px">| 나혜린 | DB              | [nature0022](https://github.com/hyerinna.hn) | Insert/select API, 크롤링, ERD 설계, DB 구축, Streamlit  |
+|<img src="https://icons.veryicon.com/png/o/internet--web/digital-monster/plotmon.png" alt=agumon\ width="64px" height="64px">| 박영훈 | Frontend        | [silentkit12](https://github.com/Yhpark0208) | 크롤링, ERD 설계, Streamlit, 차트 시각화, 리드미 작성
+|<img src="https://icons.veryicon.com/png/o/internet--web/digital-monster/tentomon.png" alt=tentomon\ width="64px" height="64px">| 이동민 | Backend         | [Wjaehyun](https://github.com/Wjaehyun) | 크롤링, ERD 설계, Streamlit, 차트 시각화, FAQ
+|<img src="https://icons.veryicon.com/png/o/internet--web/digital-monster/punimon.png" alt=agumon\ width="64px" height="64px">| 전윤우 | Data processing | [hyebinhy](https://github.com/hyebinhy) |  크롤링, ERD 설계, Streamlit, 차트 시각화, 리드미 작성  |
+|<img src="https://icons.veryicon.com/png/o/internet--web/digital-monster/yukimibotamon.png" alt=yukimibotamon\ width="64px" height="64px">| 진세형 | Web Crawling    | [duck213](https://github.com/duck213) |  Insert/select API, 크롤링, ERD 설계, DB 구축, Streamlit  |
+
+---
 2. 프로젝트 개요
 2-1. 프로젝트명: 전기차 등록 및 전기차 충전소 조회 시스템
 2-2. 프로젝트 소개:
