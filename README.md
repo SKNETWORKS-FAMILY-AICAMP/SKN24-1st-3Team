@@ -13,7 +13,6 @@
 | 전윤우 | [Yunu-Jeon](https://github.com/Yunu-Jeon) |  크롤링, ERD 설계, Streamlit, 차트 시각화, 리드미 작성  |
 | 진세형 | [gugu-eightyone](https://github.com/gugu-eightyone) |  Insert/select API, 크롤링, ERD 설계, DB 구축, Streamlit  |
 
----
 ## 2. 프로젝트 개요
 ### 2-1. 프로젝트명
 전기차 등록 및 전기차 충전소 조회 시스템
@@ -30,8 +29,6 @@
 
 #### 2-4-2. 전기차 이용 편의성 향상
 이용자가 충전 환경을 사전에 파악할 수 있도록 지원함으로써 충전 불안을 완화하고 전기차 이용 경험을 개선한다.
-
----
 
 ## 3. 기술 스택
 | 분류                 | 기술/도구                                                                 |
