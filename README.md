@@ -9,7 +9,7 @@ __다함께 전기차⚡__
 |:--------:|:-----------------:| :---:|
 | 나혜린 | [nngpfls](https://github.com/nngpfls) | Insert/select API, 크롤링, ERD 설계, DB 구축, Streamlit  |
 | 박영훈 | [aprkaos56](https://github.com/aprkaos56) | 크롤링, ERD 설계, Streamlit, 차트 시각화, 리드미 작성
-| 이동민 | [수정필요](https://github.com/수정필요) | 크롤링, ERD 설계, Streamlit, 차트 시각화, FAQ
+| 이동민 | [수정필요](https://github.com/LeeDongMin0115) | 크롤링, ERD 설계, Streamlit, 차트 시각화, FAQ
 | 전윤우 | [Yunu-Jeon](https://github.com/Yunu-Jeon) |  크롤링, ERD 설계, Streamlit, 차트 시각화, 리드미 작성  |
 | 진세형 | [gugu-eightyone](https://github.com/gugu-eightyone) |  Insert/select API, 크롤링, ERD 설계, DB 구축, Streamlit  |
 
