@@ -40,7 +40,8 @@
 | 데이터 수집       | ![Selenium](https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white)                                                  |
 
 ## 4. WBS
-<img width="1710" height="372" alt="image" src="https://github.com/user-attachments/assets/c61e2ecb-1352-4ec2-8849-384b1a05b431" />
+<img width="1700" height="490" alt="image" src="https://github.com/user-attachments/assets/42c6d1c1-646d-456c-8445-860757ae52d0" />
+
 
 ## 5. 요구사항 명세서
 ### 5-1. 전기차 등록 현황 조회
