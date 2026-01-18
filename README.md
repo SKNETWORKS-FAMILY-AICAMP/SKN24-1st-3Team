@@ -1,3 +1,15 @@
+
+
+https://github.com/user-attachments/assets/e3c7bd20-0434-4afc-b571-c131772a6925
+
+
+
+https://github.com/user-attachments/assets/59d6c240-ee4d-48f6-90b8-6598397bc349
+
+
+
+https://github.com/user-attachments/assets/5721fa1d-d7f0-4879-b549-1efa67732298
+
 # SKN24-1st-3Team
 
 ## 1. 팀 소개
